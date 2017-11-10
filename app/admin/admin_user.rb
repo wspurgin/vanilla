@@ -11,6 +11,10 @@ ActiveAdmin.register AdminUser do
     actions
   end
 
+  show do
+    active_admin_comments
+  end
+
   filter :email
   filter :current_sign_in_at
   filter :sign_in_count

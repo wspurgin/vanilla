@@ -2,7 +2,7 @@ class ThingsController < ApplicationController
   def index
     things = ids.map do |id|
       {
-        id: id,
+        id: Integer(id),
         name: "Thing #{id}"
       }
     end

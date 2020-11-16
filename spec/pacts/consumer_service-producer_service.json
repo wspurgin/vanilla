@@ -1,0 +1,51 @@
+{
+  "consumer": {
+    "name": "Consumer Service"
+  },
+  "provider": {
+    "name": "Producer Service"
+  },
+  "interactions": [
+    {
+      "description": "a request to get data for multiple Things",
+      "providerState": "things exist",
+      "request": {
+        "method": "get",
+        "path": "/api/things",
+        "query": "ids=12345&ids=67890"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "things": [
+            {
+              "12345": {
+                "id": 12345,
+                "name": "Thing 1"
+              },
+              "67890": {
+                "id": 67890,
+                "name": "Thing 2"
+              }
+            }
+          ]
+        },
+        "matchingRules": {
+          "$.body.things[0].12345.name": {
+            "match": "type"
+          },
+          "$.body.things[0].67890.name": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

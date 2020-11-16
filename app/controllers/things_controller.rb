@@ -1,6 +1,6 @@
 class ThingsController < ApplicationController
   def index
-    things = index_params[:ids].map do |id|
+    things = ids.map do |id|
       {
         id: id,
         name: "Thing #{id}"
@@ -10,7 +10,7 @@ class ThingsController < ApplicationController
     render json: { things: things }
   end
 
-  def index_params
-    params.require(ids: [])
+  def ids
+    params.permit(ids: []).require(:ids)
   end
 end

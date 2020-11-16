@@ -47,11 +47,11 @@ RSpec.describe ThingServiceClient, pact: true do
       let(:response_body) do
         {
           "things": [
-            "12345": {
+            {
               "id": 12345,
               "name": Pact.like("Thing 1"),
             },
-            "67890": {
+            {
               "id": 67890,
               "name": Pact.like("Thing 2"),
             }

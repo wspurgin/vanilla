@@ -12,7 +12,7 @@
       "request": {
         "method": "get",
         "path": "/things",
-        "query": "ids=12345&ids=67890"
+        "query": "ids%5B%5D=12345&ids%5B%5D=67890"
       },
       "response": {
         "status": 200,
@@ -21,22 +21,20 @@
         "body": {
           "things": [
             {
-              "12345": {
-                "id": 12345,
-                "name": "Thing 1"
-              },
-              "67890": {
-                "id": 67890,
-                "name": "Thing 2"
-              }
+              "id": 12345,
+              "name": "Thing 1"
+            },
+            {
+              "id": 67890,
+              "name": "Thing 2"
             }
           ]
         },
         "matchingRules": {
-          "$.body.things[0].12345.name": {
+          "$.body.things[0].name": {
             "match": "type"
           },
-          "$.body.things[0].67890.name": {
+          "$.body.things[1].name": {
             "match": "type"
           }
         }

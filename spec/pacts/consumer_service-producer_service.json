@@ -12,7 +12,7 @@
       "request": {
         "method": "get",
         "path": "/things",
-        "query": "ids%5B%5D=12345&ids%5B%5D=67890"
+        "query": "ids=12345&ids=67890"
       },
       "response": {
         "status": 200,

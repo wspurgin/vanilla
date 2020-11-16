@@ -10,7 +10,7 @@ class ThingServiceClient
   base_uri 'http://thing-service.com'
 
   def get_things(thing_ids)
-    JSON.parse(self.class.get('/api/things', { query: { ids: thing_ids } }).body)
+    JSON.parse(self.class.get('/things', { query: { ids: thing_ids } }).body)
   end
 end
 
@@ -22,7 +22,7 @@ RSpec.describe ThingServiceClient, pact: true do
   subject { ThingServiceClient.new }
 
   describe "#get_things" do
-    let(:request_path) { "/api/things" }
+    let(:request_path) { "/things" }
     let(:result) { subject.get_things(thing_ids) }
     let(:response_code) { 200 }
     let(:thing_ids) { [12345, 67890] }

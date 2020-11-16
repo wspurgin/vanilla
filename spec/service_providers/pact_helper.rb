@@ -11,4 +11,3 @@ Pact.service_consumer "Consumer Service" do
     end
   end
 end
-

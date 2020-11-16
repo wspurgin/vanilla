@@ -11,7 +11,7 @@
       "providerState": "things exist",
       "request": {
         "method": "get",
-        "path": "/api/things",
+        "path": "/things",
         "query": "ids%5B%5D=12345&ids%5B%5D=67890"
       },
       "response": {

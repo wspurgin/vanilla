@@ -31,3 +31,5 @@ jobs:
       run: bin/setup
     - name: Run tests
       run: bundle exec rake
+    - name: Run pacts
+      run: bundle exec rake pact:verify

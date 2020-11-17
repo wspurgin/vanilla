@@ -35,8 +35,9 @@ jobs:
       with:
         name: pacts
         path: spec/pacts/
-    - name: Store logs
+    - name: Store logs on failure
+      if: failure()
       uses: actions/upload-artifact@v2
       with:
-        name: pacts
+        name: logs
         path: log/

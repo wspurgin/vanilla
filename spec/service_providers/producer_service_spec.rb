@@ -43,7 +43,7 @@ RSpec.describe ThingServiceClient, pact: true do
         )
     end
 
-    context "Skus exist" do
+    context "Things exist" do
       let(:response_body) do
         {
           "things": [
@@ -59,7 +59,7 @@ RSpec.describe ThingServiceClient, pact: true do
         }
       end
 
-      it "responds with skus" do
+      it "responds with things" do
         expect(result).to be_a(Hash)
       end
     end

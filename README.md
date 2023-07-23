@@ -1,24 +1,5 @@
-# README
+# Vanilla
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a vanilla install of (typically) the latest Rails version (legit, just
+`rails new`). I use this vanilla install to debug issues with gems and Rails.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

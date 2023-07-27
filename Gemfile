@@ -36,6 +36,8 @@ gem "jbuilder"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+gem "sidekiq"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -67,6 +69,10 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem "rspec"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "rspec-sidekiq", git: "https://github.com/wspurgin/rspec-sidekiq"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
